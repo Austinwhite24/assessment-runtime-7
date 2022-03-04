@@ -24,7 +24,7 @@ const uniqueCharacters = (str) => {
 
     for (let i = 0; i < newstr.length; i++) 
     for (let j = i + 1; j < newstr.length; j++) 
-    if (newstr[i] === newstr[j])
+    if (i !== j && newstr[i] === newstr[j])
     return false;
 
     
@@ -39,7 +39,7 @@ console.log(uniqueCharacters('Monday'))
 const sumZero = (arr) => {
     for (let i = 0; i < arr.length; i++) 
     for (let j = i + 1; j < arr.length; j++)
-    if (arr[i] + arr[j] === 0)
+    if (i !== j && arr[i] + arr[j] === 0)
     return true;
 
     return false;
